@@ -99,6 +99,8 @@
 				font-weight: bold;
 			}
 			.btns {
+				display: flex;
+				flex-direction: row-reverse;
 				button {
 					width: 30px;
 					height: 30px;
