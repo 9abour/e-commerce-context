@@ -32,6 +32,13 @@
 				}
 			}
 		}
+		@include sm {
+			.info {
+				.add-to-cart {
+					display: block !important;
+				}
+			}
+		}
 		.image {
 			height: 250px;
 			margin: 0 auto;
