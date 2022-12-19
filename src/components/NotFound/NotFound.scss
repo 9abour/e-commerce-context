@@ -1,0 +1,56 @@
+@import "../../sass/index";
+
+.not-found {
+	position: relative;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	@include sm {
+		& {
+			.overlay {
+				.title {
+					margin-top: 2rem !important;
+					h1 {
+						font-size: 2rem !important;
+					}
+				}
+				.error {
+					font-size: 15rem !important;
+				}
+			}
+		}
+	}
+	.overlay {
+		.title {
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin-top: 2.8rem;
+			h1 {
+				font-size: 4rem;
+				font-weight: 700;
+				letter-spacing: 10px;
+				text-transform: uppercase !important;
+				color: $clr-white;
+				text-align: center;
+			}
+		}
+		.error {
+			font-size: 20rem;
+			font-weight: 700;
+			text-shadow: 1px 2px $clr-primary-3, -1px -2px $clr-primary-1;
+			color: $clr-primary-5;
+		}
+		.btns {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 2rem;
+			button {
+				padding: 0.3rem 2rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+@import "../../sass/index";
+
+.main-products {
+	margin-top: 5rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	@include lg {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@include md {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include xs {
+		grid-template-columns: repeat(1, 1fr);
+		text-align: center;
+	}
+	.product {
+		position: relative;
+		border-radius: $radius;
+		overflow: hidden;
+		box-shadow: $dark-shadow;
+		background-color: $clr-primary-6;
+		border-width: 0.5px;
+		border-style: solid;
+		border-color: $clr-grey-5;
+		color: $clr-white;
+		&:hover {
+			.info {
+				.add-to-cart {
+					display: block;
+				}
+			}
+		}
+		.image {
+			height: 250px;
+			margin: 0 auto;
+			img {
+				width: 200px;
+			}
+		}
+		.info {
+			padding: 0.5rem 0.8rem;
+			.add-to-cart {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				display: none;
+				cursor: pointer;
+			}
+			.title {
+				font-size: $extra-small-size-IIII;
+			}
+			.price-container {
+				.price {
+					font-size: $small-size;
+					font-weight: 600;
+					border-radius: $radius;
+					margin-left: 0.5rem;
+				}
+			}
+		}
+	}
+}

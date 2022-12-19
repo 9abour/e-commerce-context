@@ -1,0 +1,31 @@
+@import "../../sass/index";
+
+.navbar-container {
+	height: 60px;
+	background-color: $clr-primary-6;
+	box-shadow: $light-shadow;
+	padding: 0 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	top: 0;
+	.left-side {
+		display: flex;
+		align-items: center;
+		.logo {
+			margin-right: 2rem;
+			cursor: pointer;
+		}
+		.products {
+			a {
+				text-decoration: none;
+				font-size: 1.5rem;
+				color: $clr-white;
+				font-weight: 600;
+			}
+		}
+	}
+}
