@@ -25,12 +25,14 @@
 		}
 		@include sm {
 			& {
+				flex-direction: column;
 				margin-right: 2.5rem;
-				padding: 0;
+				padding: 0.5rem 0;
+				gap: 0.5rem;
 				.image {
 					img {
-						height: 40px !important;
-						width: 40px !important;
+						height: 70px !important;
+						width: 70px !important;
 					}
 				}
 				.title {
@@ -44,9 +46,12 @@
 					}
 				}
 				.btns {
+					display: flex;
+					gap: 0.5rem;
 					button {
 						width: 25px !important;
 						height: 25px !important;
+						margin: 0 !important;
 					}
 				}
 				.total {
@@ -163,6 +168,11 @@
 		display: flex;
 		justify-content: flex-end;
 		color: $clr-white;
+		@include sm {
+			& {
+				margin: 1rem 0;
+			}
+		}
 		.cart-total {
 			& > div {
 				display: flex;
