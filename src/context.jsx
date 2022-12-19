@@ -88,7 +88,7 @@ class ProductProvider extends Component {
 				};
 			},
 			() => {
-				this.setTotal(), this.handleCartProducts();
+				this.setTotal(), this.saveCartProductsLS();
 			}
 		);
 	};
@@ -201,6 +201,10 @@ class ProductProvider extends Component {
 			}
 		);
 
+		this.state.products.map(item => {
+			item.inCart = false;
+		});
+
 		// Remove everything in ***LS 😂
 		localStorage.clear();
 	};
@@ -238,7 +242,7 @@ class ProductProvider extends Component {
 		}
 	};
 
-	handleCartProducts = () => {
+	saveCartProductsLS = () => {
 		const products = this.state.cart;
 		localStorage.setItem("product", JSON.stringify(products));
 	};
