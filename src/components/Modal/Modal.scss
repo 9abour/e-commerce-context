@@ -11,6 +11,11 @@
 			.product-modal {
 				width: 20rem;
 				height: 80%;
+				.image {
+					img {
+						width: 10rem;
+					}
+				}
 			}
 		}
 	}
@@ -26,7 +31,6 @@
 	padding: 4rem 0;
 	border-radius: $radius;
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-
 	.msg {
 		h4 {
 			color: #2acc78;
